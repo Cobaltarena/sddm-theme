@@ -22,8 +22,8 @@ sddm-candy-sugar = stdenv.mkDerivation rec {
     src = fetchFromGitHub {
       owner = "Cobaltarena";
       repo = "sddm-theme";
-      rev = "f19cf8789736a282d3bce06c35d14c6e4a270a31";
-      sha256 = "Taj2ns/vXZiS2uOkPHxvRCjbMtgF/5DueNI9zPtwJ/Q=";
+      rev = "xxxxxxx"; # hash of the commit
+      sha256 = "yyyyyyy"; # sha of the repository, can be found using nix-prefetch-github
     };
   };
 ```
@@ -33,3 +33,7 @@ Then do `sudo nixos-rebuild switch` and you should be good with this !
 # Testing
 
 In your favorite terminal, do `sddm-greeter --test-mode --theme $out/share/sddm/themes/candy-sugar` after installing and replacing `$out` to the right /nix/store path
+
+# Background
+
+If you want to change the background image, you just have to change the line `Background` property in `theme.conf`
